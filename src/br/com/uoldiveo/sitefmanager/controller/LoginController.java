@@ -12,9 +12,9 @@ import br.com.uoldiveo.sitefmanager.modelo.Usuarios;
 public class LoginController {
 
 	
-	@RequestMapping("/loginForm")
+	@RequestMapping("/login")
 	public String loginForm(){
-		return "loginForm";
+		return "login";
 	}
 	
 	@RequestMapping("/efetuaLogin")
