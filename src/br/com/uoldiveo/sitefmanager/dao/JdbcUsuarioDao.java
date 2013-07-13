@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import br.com.caelum.tarefas.modelo.Usuario;
 import br.com.uoldiveo.sitefmanager.cf.ConnectionFactory;
 import br.com.uoldiveo.sitefmanager.modelo.Usuarios;
 
