@@ -17,12 +17,12 @@ public class LoginController {
 		return "login";
 	}
 	
-	@RequestMapping("/efetuaLogin")
+	@RequestMapping("/menu")
 	public String efetuaLogin (Usuarios  usuario, HttpSession session){
 		if(new JdbcUsuarioDao().existeUsuario(usuario)){
 			session.setAttribute("usuarioLogado", usuario);
 			return "menu";
 		}
-			return "redirect:loginForm";
+			return "redirect:login";
 	}
 }

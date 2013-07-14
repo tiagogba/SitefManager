@@ -15,7 +15,7 @@
 <div class="container">
   <div class="login">
     <h1>Sitef Manager</h1>
-    <form method="post" action="efetuaLogin">
+    <form method="post" action="menu">
       <p><input type="text" name="login" value="" placeholder="Username"></p>
       <p><input type="password" name="password" value="" placeholder="Password"></p>
       <p class="remember_me">

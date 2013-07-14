@@ -23,9 +23,7 @@
    <td colspan="2">
       <table width="100%" border="0" cellpadding="1" cellspacing="1">
          <tr class="menu">
-         	<td nowrap align="center">&nbsp;&nbsp;<a href="efetuaLogin">Home</a>&nbsp;&nbsp;</td>
-         	<td nowrap align="center">&nbsp;&nbsp;<a href="/status.html?ctl=recimp">ControleSitef</a>&nbsp;&nbsp;</td>
-         	<td nowrap align="center">&nbsp;&nbsp;<a href="/status.html?ctl=fi">Escala</a>&nbsp;&nbsp;</td>
+         	<td nowrap align="center">&nbsp;&nbsp;<a href="cadastro">Cadastrar</a>&nbsp;&nbsp;</td>
          	<td width="100%">&nbsp;</td>
          </tr>
       </table>
@@ -33,6 +31,4 @@
 </tr>
 </table>
 <hr>
-
-
 <style>
