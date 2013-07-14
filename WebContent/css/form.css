@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+label,  input {
+	display: block;
+	float: left;
+}
+
+label {	
+	text-align: right;
+	width: 100px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+}
+
+fieldset {
+	border: solid 1px #cfcfcf;
+	width: 600px;
+	top: 300px;
+}
+
+br {
+	clear: left;
+}
