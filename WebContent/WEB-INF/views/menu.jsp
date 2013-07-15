@@ -8,7 +8,7 @@
 <title>SitefManager</title>
 </head>
 <body>
-<c:import url="cabeca.jsp"></c:import><br />
+<c:import url="cabecalho.jsp"></c:import><br />
 <h3>Sistema de controle de licencas do sitef</h3>
 <c:import url="rodape.jsp"></c:import>
 </body>
