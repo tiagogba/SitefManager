@@ -4,14 +4,8 @@
 <html>
 <head>
 
-<style>
-   td{font-family:arial;font-size:0.8em;}
-   A         { TEXT-DECORATION: none; color:#ffffff; }
-   A:hover   { TEXT-DECORATION: none; color:#ffc600; }
-   A:link    { TEXT-DECORATION: none; color:#ffffff; }
-   A:visited { TEXT-DECORATION: none; color:#ffffff; }
-   body{font-family:arial;}
-   .menu{ vertical-align: middle; font-family: arial; font-weight: bold; font-style: normal; BACKGROUND-COLOR: #cfcfcf; font-size: 12pt;}
+<style type="text/css">
+@import url("css/cabeca.css");
 </style>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -32,10 +26,10 @@
    <td colspan="2">
       <table width="100%" border="0" cellpadding="1" cellspacing="1">
          <tr class="menu">
-         	<td nowrap align="center">&nbsp;&nbsp;<a href="cadastramento">Cadastrar</a>&nbsp;&nbsp;</td>
+         	<td nowrap align="center">&nbsp;&nbsp;<a href="adiciona">Cadastrar</a>&nbsp;&nbsp;</td>
          	<td nowrap align="center">&nbsp;&nbsp;<a href="#">Alterar</a>&nbsp;&nbsp;</td>
-         	<td nowrap align="center">&nbsp;&nbsp;<a href="#">Excluir</a>&nbsp;&nbsp;</td>
-         	<td nowrap align="center">&nbsp;&nbsp;<a href="#">Listar</a>&nbsp;&nbsp;</td>
+         	<td nowrap align="center">&nbsp;&nbsp;<a href="remove">Excluir</a>&nbsp;&nbsp;</td>
+         	<td nowrap align="center">&nbsp;&nbsp;<a href="lista">Listar</a>&nbsp;&nbsp;</td>
          	<td width="100%">&nbsp;</td>
          </tr>
       </table>

@@ -25,7 +25,7 @@
 </head>
 <body>
 	<c:import url="cabecalho.jsp"></c:import>
-	<form action="cadastro" method="post">
+	<form action="adicionaloja" method="post">
 		<fieldset>
 			<p>
 				<label>Empresa</label><input type="text" size="45" name="empresa"

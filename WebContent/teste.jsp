@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>adicionado com sucesso</h1>
-<a href="adiciona">voltar</a>
+
 </body>
 </html>

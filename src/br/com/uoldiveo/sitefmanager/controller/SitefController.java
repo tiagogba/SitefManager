@@ -4,6 +4,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -20,17 +21,35 @@ public class SitefController {
 		this.dao = dao;
 	}
 	
-	@RequestMapping ("cadastramento")
+//	
+//	@RequestMapping ("menu")
+//	public String form(){
+//		return "menu";
+//	}
+	@RequestMapping ("adiciona")
 	public String form(){
 		return "cadastro";
 	}
 	
-	@RequestMapping
+	@RequestMapping ("adicionaloja")
 	public String adiciona(@Valid Lojas lojas, BindingResult result){
 		if(result.hasFieldErrors("descricao")){
-			return "cadastro";	
+			return "cadastro";
 		}
 		dao.adiciona(lojas);
 		return  "adicionado";
 	}
+	
+	@RequestMapping("remove")
+	public String remove(Lojas lojas){
+		dao.remove(lojas);
+		return "redirect:lista";
+	}
+	
+	@RequestMapping("lista")
+	public String lista(Model model){
+		model.addAttribute("lojas", dao.lista());
+		return "listaloja";
+	}
+	
 }

@@ -6,6 +6,8 @@ import javax.validation.constraints.Size;
 
 public class Lojas {
 	
+	
+	private Long id;
 	@NotNull @Size(min=5, max=255)
 	private String empresa;
 	private String loja;
@@ -13,6 +15,13 @@ public class Lojas {
 	private String cnpj;
 	
 	//Getters and Setters
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	
 	public String getRazaoSocial() {
 		return razaoSocial;

@@ -1,8 +1,13 @@
 package br.com.uoldiveo.sitefmanager.dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
 
 import javax.sql.DataSource;
 
@@ -37,5 +42,56 @@ public class JdbcSitefDao {
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	public void remove(Lojas lojas) {
+
+		if (lojas.getId() == null) {
+			throw new IllegalStateException("Id da tarefa não deve ser nula.");
+		}
+
+		String sql = "delete from lojas where id = ?";
+		PreparedStatement stmt;
+		try {
+			stmt = connection.prepareStatement(sql);
+			stmt.setLong(1, lojas.getId());
+			stmt.execute();
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	
+	public List<Lojas> lista() {
+		try {
+			List<Lojas> lojas = new ArrayList<Lojas>();
+			PreparedStatement stmt = this.connection.prepareStatement("select * from lojas");
+
+			ResultSet rs = stmt.executeQuery();
+
+			while (rs.next()) {
+				// adiciona a tarefa na lista
+				lojas.add(populaLojas(rs));
+			}
+			rs.close();
+			stmt.close();
+
+			return lojas;
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	//NAO SEI PRA QUE SERVE AINDA
+	private Lojas populaLojas(ResultSet rs) throws SQLException {
+		Lojas lojas = new Lojas();
+
+		// popula o objeto tarefa
+		lojas.setId(rs.getLong("id"));
+		lojas.setEmpresa(rs.getString("empresa"));
+		lojas.setLoja(rs.getString("loja"));
+		lojas.setRazaoSocial(rs.getString("razaosocial"));
+		lojas.setCnpj(rs.getString("cnpj"));
+		return lojas;
 	}
 }
