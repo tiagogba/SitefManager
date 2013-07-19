@@ -8,6 +8,21 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>SitefManager</title>
+<script>
+function Function()
+{
+	var x;
+	var r=confirm("Press a button!");
+	if (r==true)
+	  {
+	  x="You pressed OK!";
+	  }
+	else
+	  {
+	  x="You pressed Cancel!";
+	  }
+}
+</script>
 </head>
 <body>
 <c:import url="cabecalho.jsp"></c:import>
@@ -27,9 +42,10 @@
 				<td>${lojas.loja}</td>
 				<td>${lojas.razaoSocial}</td>
 				<td>${lojas.cnpj}</td>
-				<td><a href="remove?id=${lojas.id}">Remover</a></td>
+				<td><a href="remove?id=${lojas.id}" onclick="return confirm('Você tem certeza que quer remover essa loja?')" >Remover</a></td>
+				<td><a href="mostralojas?id=${lojas.id}">Alterar</a>
 			</tr>
 	</c:forEach>
-	</table>
+</table>
 </body>
 </html>

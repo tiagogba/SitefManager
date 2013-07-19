@@ -44,7 +44,7 @@
 					placeholder="cnpj" /><br />
 			</p>
 			<p>
-				<input type="submit" value="Enviar" />
+				<input type="submit" value="Enviar" onclick="alert('Loja adicionada com sucesso')" />
 			</p>
 		</fieldset>
 	</form>

@@ -37,7 +37,7 @@ public class SitefController {
 			return "cadastro";
 		}
 		dao.adiciona(lojas);
-		return  "adicionado";
+		return  "cadastro";
 	}
 	
 	@RequestMapping("remove")
@@ -52,4 +52,14 @@ public class SitefController {
 		return "listaloja";
 	}
 	
+	@RequestMapping("mostralojas")
+	public String mostra(Long id, Model model){
+		model.addAttribute("lojas", dao.buscaPorId(id));
+		return "mostra";
+	}
+	@RequestMapping("alteralojas")
+	public String altera (Lojas lojas){
+		dao.altera(lojas);
+		return "redirect:lista";
+	}
 }

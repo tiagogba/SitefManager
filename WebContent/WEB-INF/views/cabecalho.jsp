@@ -27,8 +27,6 @@
       <table width="100%" border="0" cellpadding="1" cellspacing="1">
          <tr class="menu">
          	<td nowrap align="center">&nbsp;&nbsp;<a href="adiciona">Cadastrar</a>&nbsp;&nbsp;</td>
-         	<td nowrap align="center">&nbsp;&nbsp;<a href="#">Alterar</a>&nbsp;&nbsp;</td>
-         	<td nowrap align="center">&nbsp;&nbsp;<a href="remove">Excluir</a>&nbsp;&nbsp;</td>
          	<td nowrap align="center">&nbsp;&nbsp;<a href="lista">Listar</a>&nbsp;&nbsp;</td>
          	<td width="100%">&nbsp;</td>
          </tr>

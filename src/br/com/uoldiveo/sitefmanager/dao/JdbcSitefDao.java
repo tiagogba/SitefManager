@@ -60,6 +60,48 @@ public class JdbcSitefDao {
 			throw new RuntimeException(e);
 		}
 	}
+	public void altera(Lojas lojas) {
+		String sql = "update lojas set empresa = ?, loja = ?, razaosocial = ?, cnpj = ? where id = ?";
+		PreparedStatement stmt;
+		try {
+			stmt = connection.prepareStatement(sql);
+			stmt.setString(1, lojas.getEmpresa());
+			stmt.setString(2, lojas.getLoja());
+			stmt.setString(3, lojas.getRazaoSocial());
+			stmt.setString(4, lojas.getCnpj());
+			stmt.setLong(5, lojas.getId());
+			stmt.execute();
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+
+	public Lojas buscaPorId(Long id) {
+
+		if (id == null) {
+			throw new IllegalStateException("Id da loja não deve ser nula.");
+		}
+
+		try {
+			PreparedStatement stmt = this.connection
+					.prepareStatement("select * from lojas where id = ?");
+			stmt.setLong(1, id);
+
+			ResultSet rs = stmt.executeQuery();
+
+			if (rs.next()) {
+				return populaLojas(rs);
+			}
+
+			rs.close();
+			stmt.close();
+
+			return null;
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
 	
 	
 	public List<Lojas> lista() {
@@ -82,7 +124,7 @@ public class JdbcSitefDao {
 		}
 	}
 	
-	//NAO SEI PRA QUE SERVE AINDA
+	
 	private Lojas populaLojas(ResultSet rs) throws SQLException {
 		Lojas lojas = new Lojas();
 
