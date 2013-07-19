@@ -28,4 +28,7 @@
 	    <property name="password" value="qq123!@#"/>
 	</bean>
 	
+	<mvc:interceptors>
+	    <bean class="br.com.uoldiveo.interceptor.Autorizador"/>
+	</mvc:interceptors>
 </beans>
