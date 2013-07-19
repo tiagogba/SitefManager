@@ -61,7 +61,7 @@ public class JdbcSitefDao {
 		}
 	}
 	public void altera(Lojas lojas) {
-		String sql = "update lojas set empresa = ?, loja = ?, razaosocial = ?, cnpj = ? where id = ?";
+		String sql = "update lojas set empresa =?, loja =?, razaosocial = ?, cnpj = ? where id = ?";
 		PreparedStatement stmt;
 		try {
 			stmt = connection.prepareStatement(sql);
