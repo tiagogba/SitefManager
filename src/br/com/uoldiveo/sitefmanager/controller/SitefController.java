@@ -26,6 +26,8 @@ public class SitefController {
 //	public String form(){
 //		return "menu";
 //	}
+	
+	
 	@RequestMapping ("adiciona")
 	public String form(){
 		return "cadastro";
