@@ -21,12 +21,16 @@ public class SitefController {
 		this.dao = dao;
 	}
 	
-//	
+	
 //	@RequestMapping ("menu")
-//	public String form(){
+//	public String menu(){
 //		return "menu";
 //	}
 	
+	@RequestMapping("logoff")
+	public String logoff(){
+		return "logoff";
+	}
 	
 	@RequestMapping ("adiciona")
 	public String form(){
@@ -35,7 +39,7 @@ public class SitefController {
 	
 	@RequestMapping ("adicionaloja")
 	public String adiciona(@Valid Lojas lojas, BindingResult result){
-		if(result.hasFieldErrors("descricao")){
+		if(result.hasFieldErrors("empresa")){
 			return "cadastro";
 		}
 		dao.adiciona(lojas);

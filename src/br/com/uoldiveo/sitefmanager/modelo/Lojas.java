@@ -8,8 +8,9 @@ public class Lojas {
 	
 	
 	private Long id;
-	@NotNull @Size(min=5, max=255)
+	@NotNull (message="{loja.descricao.vazia}")
 	private String empresa;
+	@NotNull(message="{loja.descricao.vazia}") @Size (min=1)
 	private String loja;
 	private String razaoSocial;
 	private String cnpj;

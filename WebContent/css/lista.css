@@ -1,0 +1,144 @@
+@CHARSET "UTF-8";
+body {
+  font-family: "arial", sans-serif;
+	padding-top: 5px;
+}
+
+body>a {
+	background-color: #eef;
+	margin-top: 3px;
+	display: inline-block;
+	padding: 3px;
+	border: solid #aaf;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+body>a:hover {
+	background-color: #559;
+	color: white;
+}
+
+body table tr:hover {
+	background-color: #cfc;
+}
+
+h1,h2,h3 {
+	text-shadow: 2px 1px 5px grey;
+}
+
+input, textarea {
+	background-color: #eef;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	padding: 2px 5px;
+}
+
+table {
+	border-collapse: collapse;
+	text-align: left;
+}
+
+table td {
+	padding: 3px 20px;
+}
+
+table th {
+	padding: 3px 20px;
+	background-color: #aaf;
+}
+
+table a {
+	letter-spacing: 2px;
+	font-size: 14px;
+}
+
+table a:hover {
+	color: red;
+}
+
+table tr:nth-child(2n) {
+	background-color: #eef;
+}
+
+select {
+	background: #eef;
+	box-shadow: 0 1px 5px #333;
+	border: 0;
+	border: solid #aaf;
+	border-radius: 4px;
+	margin-bottom: 5px;
+}
+
+
+/*------------------------------------*
+    MENU
+*------------------------------------*/
+nav {
+    clear:both;
+    color:#FFF;
+    background:#545454;
+    height:15px;
+    padding:5px;
+    font-weight: lighter;
+    font-size: 14px;
+    margin:5px 0;
+}
+nav ul {
+    padding:0;
+    margin:0;
+    list-style: none;
+    float: left;
+}
+nav ul li {
+    display: block;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+}
+nav ul li a {
+    color: #FFF;
+    background: #545454;
+    text-decoration: none;
+    padding:0.5px;
+    display:block;
+    margin:0;
+    float: left;
+}
+nav ul li a:hover {
+    background: #DEDEDE;
+    color: #666;
+}
+nav .current-menu-item a {
+    background: #FFF;
+    color: #666;
+}
+nav ul li ul {
+    display: none;
+    float: none;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    border: solid 1px #000;
+}
+nav ul li:hover > ul {
+    display: block;
+}
+nav ul li ul li,
+nav ul li ul li a {
+    float: none;
+    background: #444;
+    color: #CCC;
+}
+nav ul li ul li a:hover {
+    float: none;
+    background: #FFF;
+    color: #666;
+}
+nav ul li ul li {
+    margin: 0;
+}
+nav ul li ul li ul {
+    left: 100%;
+    top: 0;
+}

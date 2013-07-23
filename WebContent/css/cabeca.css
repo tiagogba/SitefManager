@@ -1,9 +1,0 @@
-@CHARSET "UTF-8";
-
-   td{font-family:arial;font-size:0.8em;}
-   A         { TEXT-DECORATION: none; color:#545454; }
-   A:hover   { TEXT-DECORATION: none; color:#545454; }
-   A:link    { TEXT-DECORATION: none; color:#545454; }
-   A:visited { TEXT-DECORATION: none; color:#545454; }
-   body{font-family:arial;}
-   .menu{ vertical-align: middle; font-family: arial; font-weight: bold; font-style: normal; BACKGROUND-COLOR: #cfcfcf; font-size: 12pt;}

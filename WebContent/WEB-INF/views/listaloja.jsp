@@ -24,20 +24,24 @@ function Function()
 }
 </script>
 </head>
+<style type="text/css">
+@import url("css/lista.css");
+</style>
 <body>
 <c:import url="cabecalho.jsp"></c:import>
 <table>
 <tr>
-			<th>Id</th>
+			<!-- <th>Id</th> -->
 			<th>Empresa</th>
 			<th>Loja</th>
 			<th>Razao Social</th>
 			<th>CNPJ</th>
 			<th>Remover</th>
+			<th>Altera</th>
 		</tr>
 	<c:forEach items="${lojas}" var="lojas">
 			<tr>
-				<td>${lojas.id}</td>
+				<!--  <td>${lojas.id}</td>-->
 				<td>${lojas.empresa}</td>
 				<td>${lojas.loja}</td>
 				<td>${lojas.razaoSocial}</td>

@@ -9,7 +9,7 @@
 </head>
 <body>
 <c:import url="cabecalho.jsp"></c:import><br />
-<h3>Sistema de controle de licencas do sitef</h3>
+<h3>Controle de licenças do SiTef</h3>
 <c:import url="rodape.jsp"></c:import>
 </body>
 </html>
